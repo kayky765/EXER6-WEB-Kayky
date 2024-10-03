@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página da Questão 1</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -37,10 +39,10 @@ function mostrarMensagem() {
   const nome = document.getElementById("nome").value;
   const mensagem = document.getElementById("mensagem");
   
-  if (nome ===""){
+  if (nome === ""){
      mensagem.textContent = "Por favor, insira seu nome.";
   } else{
-   mensagem.textContent = 'Olá,' + ${nome}! 'Seja bem-vindo à página do(a) aluno(a).';
+   mensagem.textContent = "Olá,"  + nome +"! Seja bem-vindo à página do(a) aluno(a).";
   }
 }
 
