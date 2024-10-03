@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Lista</h1>
+        <label for="quantidade">Digite um número:</label>
+        <input type="number" id="quantidade" min="1">
+        <button onclick="gerarLista()">Gerar Lista</button>
+        <ul id="lista"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function gerarLista() {
+    const quantidade = document.getElementById("quantidade").value;
+    const lista = document.getElementById("lista");
+    const nome = "Kayky dos Santos Pereira"; 
+    lista.innerHTML = "";
+
+    if (isNaN(quantidade) || quantidade <= 0) {
+        lista.innerHTML = "<li>Por favor, insira um número válido.</li>";
+    } else {
+        for (let i = 1; i <= quantidade; i++) {
+            const item = document.createElement("li");
+            item.textContent = `${i}. ${nome}`; 
+            lista.appendChild(item);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
